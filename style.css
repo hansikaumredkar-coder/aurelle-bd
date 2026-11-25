@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #59485b;
+  background: #fff7fb;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  flex: 1;
+  min-height: 90vh;
+  padding: 55px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ffe5ef, #eee6ff);
+}
+
+.eyebrow {
+  margin: 0;
+  color: #a273a0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+.sparkle {
+  margin-top: 20px;
+  font-size: 3rem;
+}
+
+h1 {
+  margin: 15px 0;
+  color: #9b6b91;
+  font-size: clamp(2.3rem, 7vw, 4rem);
+}
+
+.intro {
+  max-width: 520px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.choice {
+  padding: 15px 20px;
+  border: 1px solid #ead5e9;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #765675;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.choice:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(130, 90, 130, 0.12);
+}
+
+.surprise-box {
+  width: min(100%, 520px);
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #f0dced;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(130, 90, 130, 0.10);
+  line-height: 1.8;
+  animation: appear 0.35s ease;
+}
+
+#surpriseTitle {
+  margin-top: 0;
+  color: #9b6b91;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#surpriseText {
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint {
+  margin-top: 25px;
+  color: #987c99;
+  font-size: 0.9rem;
+}
+
+footer {
+  padding: 22px;
+  text-align: center;
+  background: #f5eaf5;
+  color: #8d718f;
+  font-size: 0.9rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .choices {
+    flex-direction: column;
+    width: min(100%, 320px);
+  }
+
+  .choice {
+    width: 100%;
+  }
+}
