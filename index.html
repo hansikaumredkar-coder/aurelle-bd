@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Surprise 💌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">A little something for you</p>
+      <div class="sparkle" aria-hidden="true">✨</div>
+
+      <h1>Choose Your Surprise</h1>
+      <p class="intro">
+        There are a few little surprises waiting for you.
+        Which one will you open first?
+      </p>
+
+      <div class="choices">
+        <button class="choice" data-surprise="message">💌 A little message</button>
+        <button class="choice" data-surprise="memory">🌷 A sweet memory</button>
+        <button class="choice" data-surprise="wish">🎂 A birthday wish</button>
+      </div>
+
+      <div id="surpriseBox" class="surprise-box hidden" aria-live="polite">
+        <p id="surpriseTitle"></p>
+        <p id="surpriseText"></p>
+      </div>
+
+      <p class="hint">Tap a button to reveal your surprise ♡</p>
+    </section>
+
+    <footer>Made with love, just for you ✨</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
